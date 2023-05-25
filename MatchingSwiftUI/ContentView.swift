@@ -1,14 +1,60 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private var frameWidth: CGFloat {
+        UIScreen.main.bounds.width
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HStack {
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "flame.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundColor(.red)
+                })
+                .frame(width: frameWidth / 4 - 20)
+                .padding(.leading, 30)
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "suit.diamond.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundColor(.yellow)
+                })
+                .frame(width: frameWidth / 4)
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "bubble.left.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundColor(.orange)
+                })
+                .frame(width: frameWidth / 4)
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "person.crop.circle.fill")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40, alignment: .center)
+                        .foregroundColor(.pink)
+                })
+                .frame(width: frameWidth / 4 - 20)
+                .padding(.trailing, 30)
+            }
         }
         .padding()
+        .frame(width: frameWidth)
     }
 }
 
