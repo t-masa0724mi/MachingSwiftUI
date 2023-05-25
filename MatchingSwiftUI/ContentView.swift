@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  MatchingSwiftUI
-//
-//  Created by 飯塚政美 on 2023/05/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
